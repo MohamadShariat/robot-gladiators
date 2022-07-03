@@ -3,15 +3,13 @@ let playerHealth = 100;
 let playerAttack = 10;
 let playerMoney = 10;
 
-console.log(playerName, playerHealth, playerAttack);
-
-const enemyName = 'Roborto';
+const enemyNames = ['Roborto', 'Amy Android', 'Robo Trumble'];
 let enemyHealth = 50;
 let enemyAttack = 12;
 
-const fight = function () {
+const fight = function (enemyName) {
   //Alert the player that they are starting the round
-  window.alert('Welcome to Robot Gladiators!');
+  // window.alert('Welcome to Robot Gladiators!');
   const promptFight = window.prompt(
     "Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose "
   );
@@ -85,4 +83,6 @@ const fight = function () {
   }
 };
 
-fight();
+for (let i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
